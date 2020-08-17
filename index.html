@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main id="container">
         <h1>Quick Tip</h1>
 
         <section>
@@ -52,6 +52,18 @@
             </div>
         </section>
     </main>
+    <script>
+        function update() {
+            let bill = document.getElementById("yourBill").value;
+            let tipPercent = document.getElementById("tipInput").value;
+            let split = document.getElementById("splitInput").value;
+            console.log({bill, tipPercent, split});
+        }
+
+        let container = document.getElementById("container");
+        container.addEventListener("input", update);
+
+    </script>
     
 </body>
 </html>
